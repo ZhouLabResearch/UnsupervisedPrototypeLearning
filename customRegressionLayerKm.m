@@ -86,30 +86,6 @@ classdef customRegressionLayerKm < nnet.layer.RegressionLayer ...
                 %                 xvec = backx; yvec = backy;
             end
 
-            % get the 2 farthest prototypes /\
-            % get the mean of the 2 (center of circle)
-            %             xmc = mean([ xproto(one) xproto(two) ]);
-            %             ymc = mean([ yproto(one) yproto(two) ]);
-            %             % get radius of circle
-            %             dist = sqrt( (xproto(one) - xmc)^2 + (yproto(one) - ymc)^2 );
-            %             % get distance of prototype to circle
-            %             f = @(x,y) abs(sqrt((x - xmc)^2 + (y - ymc)^2) - dist);
-            % get distance of prototype to center
-            %             g = @(x,y) sqrt((x - xmc)^2 + (y - ymc)^2);
-            % minimize distance of sum of protypes to circle
-            % and away from center
-            %             circsum = 0;
-            %             for k = 1:length(xproto)
-            %                 circsum = circsum + f(xproto(k),yproto(k));
-            % %                 maxsum = maxsum + 1000*g(xproto(k),yproto(k));
-            %             end
-
-            %             currx = xmc; curry = ymc;
-            % %                 xvec(k) = []; yvec(k) = [];
-            %             distance = sqrt( (currx-xproto).^2 +...
-            %                 (curry-yproto).^2 );
-            %             maxsum = maxsum + sum(distance);
-
             % get the distance from each output to each prototype
             % from each xm ym pair, to each xproto yproto pair
             protodist = [];
